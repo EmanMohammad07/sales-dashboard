@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stats-container">
+        <h2>Sales Statistics</h2>
+        <div class="chart">
+            <!-- Insert a chart here (you can use libraries like Chart.js) -->
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div class="filters">
+            <label for="time-period">Time Period:</label>
+            <select id="time-period" name="time-period">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For charting -->
+    <script>
+        // Example Chart.js implementation
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'line', // or 'bar', 'pie', etc.
+            data: {
+                labels: ['January', 'February', 'March'], // X-axis labels
+                datasets: [{
+                    label: 'Sales',
+                    data: [100, 200, 300], // Replace with dynamic data
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
