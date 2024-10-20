@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Sales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sales-container">
+        <h2>Record New Sale</h2>
+        <form action="/save-sales" method="POST">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required>
+            
+            <label for="quantity">Quantity Sold:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <label for="price">Price per Item:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+            
+            <button type="submit">Record Sale</button>
+        </form>
+    </div>
+</body>
+</html>
